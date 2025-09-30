@@ -1,5 +1,5 @@
 export default function Weather() {
-    const {} = useWeather()
+    // const {} = useWeather()
 
     const cards = [1, 2, 3];
 
