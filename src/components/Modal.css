@@ -45,6 +45,7 @@
 }
 
 .logout:hover {
+  background-color: #faa85c;
   border-color: #dfa131;
 }
 
@@ -61,7 +62,26 @@
 }
 
 .cancel:hover {
-  border-color: #e0d9cd;
+  background-color: #dadada;
+  border-color: #eee6dc;
+}
+
+.exit {
+  width: 210px;
+  height: 60px;
+  background-color: #ffb36c;
+  color: #292626;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 7px 20px #484848;
+  cursor: pointer;
+}
+
+.exit:hover {
+  background-color: #faa85c;
+  border-color: #dfa131;
 }
 
 @media (max-width: 430px) {
