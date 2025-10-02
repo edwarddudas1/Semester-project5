@@ -54,6 +54,9 @@ export default function Header() {
     height: 50px;
     // margin-right: 100px;
     `
+    const handleClick = () => {
+      
+    }
   return (
     <HeaderWrapper
       style={{
@@ -84,7 +87,7 @@ export default function Header() {
             gap: "20px",
           }}
         >
-          <SignUpButton>Sign up</SignUpButton>
+          <SignUpButton onClick={() => handleClick()}>Sign up</SignUpButton>
           <Avatar src={avatar} alt="avatar" />
         </div>
       </NavLinks>
