@@ -23,9 +23,9 @@ export default function Header() {
       h2 {
         font-size: 18px;
         cursor: pointer;
-        &:hover {
-          color: #007bff;
-        }
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 500;
+        font-style: normal;
       }
     `;
 
@@ -36,7 +36,10 @@ export default function Header() {
       color: black;
       border-radius: 8px;
       cursor: pointer;
-    background: #ffb36c;
+      background: #ffb36c;
+      font-family: "Montserrat Alternates", sans-serif;
+      font-weight: 500;
+      font-style: normal;
     `;
     const Text = styled.h2`
     color: black;
@@ -44,10 +47,12 @@ export default function Header() {
     const Logo = styled.img`
     width: 82px;
     height: 56px;
+    // margin-left: 100px;
     `
     const Avatar = styled.img`
     width: 50px;
     height: 50px;
+    // margin-right: 100px;
     `
   return (
     <HeaderWrapper
@@ -62,13 +67,23 @@ export default function Header() {
       }}
     >
       <NavLinks>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            gap: "200px",
+          }}
+        >
           <Logo src={logo} alt="logo" />
           <Text>Who we are</Text>
           <Text>Contacts</Text>
           <Text>Menu</Text>
         </div>
-        <div>
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+          }}
+        >
           <SignUpButton>Sign up</SignUpButton>
           <Avatar src={avatar} alt="avatar" />
         </div>
