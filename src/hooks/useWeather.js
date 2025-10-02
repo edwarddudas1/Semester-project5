@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import getHourlyForecast from '../api/weatherApi.js'
 
-const API_KEY = "1156cd29e714591bcb5a708b765d1d5f";
+// const API_KEY = "1156cd29e714591bcb5a708b765d1d5f";
 
 export function useWeather(city) {
   const [data, setData] = useState([]);
@@ -10,8 +11,11 @@ export function useWeather(city) {
   useEffect(() => {
     if (!city) return;
 
-    const fetchWeatherData = async () => {
+    const fetchWeatherData = async() => {
       try {
+
+        console.log('hi')
+
         setLoading(true);
 
         const res = await getHourlyForecast(city);
@@ -21,6 +25,8 @@ export function useWeather(city) {
 
         const forecastData = res.list.map((item) => {
           const date = new Date(item.dt * 1000);
+
+          
           return {
             cityName,
             country,
@@ -58,4 +64,5 @@ export function useWeather(city) {
   }, [city]);
 
   return { data, error, loading };
+  
 }
