@@ -9,8 +9,7 @@
     box-sizing: border-box;
     overflow: hidden;       
   }
-  
-  /* Блок форми */
+
   .signup-box {
     background: white;
     padding: 40px;
