@@ -1,0 +1,15 @@
+img{
+    width: 100px;
+    height: 100px;
+}
+.modal{
+    display: flex;
+}
+h2{
+    text-align: left;
+}
+button{
+    display: flex;
+    align-self: start;
+    background-color: orange;
+}
