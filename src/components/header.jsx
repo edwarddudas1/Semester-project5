@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assets/logo.png"
 import avatar from "../assets/avatar.png"
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
@@ -87,7 +88,7 @@ export default function Header() {
             gap: "20px",
           }}
         >
-          <SignUpButton onClick={() => handleClick()}>Sign up</SignUpButton>
+          <SignUpButton component={Link} to='/signup'>Sign up</SignUpButton>
           <Avatar src={avatar} alt="avatar" />
         </div>
       </NavLinks>

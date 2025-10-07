@@ -1,5 +1,5 @@
 import './App.css'
-import Header from'./components/header.jsx'
+import Header from'./components/Header.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SignUp from './registration/Sign-up.jsx'
 import Home from './components/Home.jsx';
