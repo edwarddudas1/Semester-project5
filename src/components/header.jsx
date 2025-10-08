@@ -55,9 +55,7 @@ export default function Header() {
     height: 50px;
     // margin-right: 100px;
     `
-    const handleClick = () => {
-      
-    }
+   
   return (
     <HeaderWrapper
       style={{
@@ -77,7 +75,10 @@ export default function Header() {
             gap: "200px",
           }}
         >
-          <Logo src={logo} alt="logo" />
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Logo src={logo} alt="logo" />
+          </Link>
+
           <Text>Who we are</Text>
           <Text>Contacts</Text>
           <Text>Menu</Text>
@@ -88,7 +89,9 @@ export default function Header() {
             gap: "20px",
           }}
         >
-          <SignUpButton component={Link} to='/signup'>Sign up</SignUpButton>
+          <Link to="/signup" style={{ textDecoration: "none" }}>
+            <SignUpButton>Sign up</SignUpButton>
+          </Link>
           <Avatar src={avatar} alt="avatar" />
         </div>
       </NavLinks>
