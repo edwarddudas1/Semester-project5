@@ -13,8 +13,8 @@ const SocialMediaLogo = styled.img`
   width: 40px;
   height: 40px;
   margin-right: 15px;
-  transition: 0.5s ease;
-  border-radius: 30%;
+  transition: 0.6s ease;
+  border-radius: 20%;
 
   &:hover {
     background: linear-gradient(45deg, #ff0080, #7928ca);
