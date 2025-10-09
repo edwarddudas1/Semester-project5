@@ -1,27 +1,25 @@
-import React, { use } from "react";
 import {useEffect, useState} from "react";
-import plane from "../img/plane.jpg";
-import shark from "../img/shark.jpg";
-import error from "../img/error.jpg";
-import tiRex from "../img/Ti-rex.jpg";
 import "./Modal.css";
 
 export default function Modal() {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => { 
     const fetchData = async() =>{
     try {
-      const response = await fetch("https://newsapi.org/v2/everything?q=tesla&from=2025-09-07&sortBy=publishedAt&apiKey=99bcd0e53b97487a874e59baffb3aa2c");
+      const response = await fetch("https://newsapi.org/v2/everything?q=tesla&from=2025-09-09&sortBy=publishedAt&apiKey=99bcd0e53b97487a874e59baffb3aa2c");
       const data = await response.json();
       console.log(data);
-      setArticles(data.articles)
+      setArticles(data.articles || []);
     } catch (error) {
       console.error(error);
+    }finally {
+      setLoading(false);
     }
   }
   fetchData();
 }, []);
-  if (!articles.length) return <div>Loading...</div>
+  if (loading) return <div>Loading...</div>
 
 
     return (
