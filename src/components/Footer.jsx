@@ -4,6 +4,9 @@ const Logo = styled.img`
   width: 90px;
   height: 62px;
   margin-left: 80px;
+  @media screen and (max-width: 587px) {
+    margin: 0;
+  }
 `;
 
 const SocialMediaLogo = styled.img`
@@ -17,7 +20,7 @@ const SocialMediaLogo = styled.img`
     background: linear-gradient(45deg, #ff0080, #7928ca);
     border-radius: 50%;
     box-shadow: 0 0 15px #ff0080;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 `;
 
@@ -25,9 +28,17 @@ const FooterContainer = styled.footer`
   width: 100%;
   background-color: #ffb36c;
   display: flex;
-  margin: 0px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 20px 0;
   align-items: center;
   gap: 80px;
+  @media screen and (max-width: 587px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 507px) {
+    gap: 30px;
+  }
 `;
 
 const sharedStyles = css`
@@ -45,6 +56,12 @@ const Text = styled.p`
   font-size: 12px;
 `;
 
+const FlexBasis = styled.div`
+  @media screen and (max-width: 587px) {
+    margin: 0 auto;
+  }
+`;
+
 export default function Footer() {
   return (
     <FooterContainer>
@@ -55,14 +72,14 @@ export default function Footer() {
         <Text>Kyiv</Text>
         <Text>Ukraine</Text>
       </div>
-      <div>
+      <FlexBasis>
         <Title>Contact us</Title>
         <div>
           <SocialMediaLogo src="../public/instagram.png" alt="instagram" />
           <SocialMediaLogo src="../public/facebook.png" alt="facebook" />
           <SocialMediaLogo src="../public/whatsapp.png" alt="whatsapp" />
         </div>
-      </div>
+      </FlexBasis>
     </FooterContainer>
   );
 }
