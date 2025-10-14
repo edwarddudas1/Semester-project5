@@ -1,0 +1,26 @@
+.weather-card {
+    width: 320px;
+    height: 430px;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* padding: 24px 20px 20px 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+       
+}
+
+.weather-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    color: black;
+
+}
