@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Log-in.css";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
 
 export default function LogIn() {
+  const [showNotification, setShowNotification] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
-    onSubmit: (values) => {
-      console.log("Form data", values);
+    onSubmit: (values, { resetForm }) => {
+      console.log("Login data", values);
+      setShowNotification(true);
+      resetForm();
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
     },
   });
 
@@ -29,6 +36,7 @@ export default function LogIn() {
             className="login-input"
             onChange={formik.handleChange}
             value={formik.values.email}
+            required
           />
 
           <label htmlFor="password">Password</label>
@@ -40,6 +48,7 @@ export default function LogIn() {
             className="login-input"
             onChange={formik.handleChange}
             value={formik.values.password}
+            required
           />
 
           <button type="submit" className="login-btn">
@@ -51,6 +60,10 @@ export default function LogIn() {
           Don’t have an account? <Link to="/signup">Sign Up</Link>
         </p>
       </div>
+
+      {showNotification && (
+        <div className="login-notification">✅ Login successful!</div>
+      )}
     </div>
   );
 }

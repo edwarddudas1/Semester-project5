@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sign-up.css";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
 
 export default function SignUp() {
+  const [showNotification, setShowNotification] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       username: "",
       email: "",
       password: "",
     },
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       console.log("Form data", values);
+      setShowNotification(true);
+      resetForm();
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
     },
   });
 
@@ -30,6 +37,7 @@ export default function SignUp() {
             className="signup-input"
             onChange={formik.handleChange}
             value={formik.values.username}
+            required
           />
 
           <label htmlFor="email">E-Mail</label>
@@ -41,6 +49,7 @@ export default function SignUp() {
             className="signup-input"
             onChange={formik.handleChange}
             value={formik.values.email}
+            required
           />
 
           <label htmlFor="password">Password</label>
@@ -52,6 +61,7 @@ export default function SignUp() {
             className="signup-input"
             onChange={formik.handleChange}
             value={formik.values.password}
+            required
           />
 
           <button type="submit" className="signup-btn">
@@ -60,10 +70,15 @@ export default function SignUp() {
         </form>
 
         <p className="signup-footer">
-          Already have an account?{" "}
-          <Link to="/login">Log In</Link>
+          Already have an account? <Link to="/login">Log In</Link>
         </p>
       </div>
+
+      {showNotification && (
+        <div className="signup-notification">
+          ✅ Registration successful!
+        </div>
+      )}
     </div>
   );
 }
