@@ -6,7 +6,7 @@ import Home from './components/Home.jsx';
 import Footer from './components/Footer'
 import Nature from "./components/Nature";
 import LineChart from "./components/LineChart";
-import Modal from "./components/Modal";
+// import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -26,5 +26,4 @@ function App() {
   );
 }
 
-export default App;
 export default App;
