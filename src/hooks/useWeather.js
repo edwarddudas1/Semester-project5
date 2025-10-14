@@ -43,6 +43,9 @@ export function useWeather(city) {
             temp: item.main.temp,
             temp_min: item.main.temp_min,
             temp_max: item.main.temp_max,
+            weather: {
+              icon: item.weather[0].icon
+            }
           };
         });
 
