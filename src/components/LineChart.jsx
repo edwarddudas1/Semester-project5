@@ -128,12 +128,11 @@ export default function LineChart() {
     <>
       <div
         style={{
-          width: "100%",
-          maxWidth: "1140px",
-          height: "554px",
           backgroundColor: "#D9D9D9",
           borderRadius: "20px",
-        }}>
+          margin: "20px",
+        }}
+      >
         <Line
           data={data}
           options={options}
@@ -141,7 +140,8 @@ export default function LineChart() {
           style={{
             width: "100%",
             height: "100%",
-          }}/>
+          }}
+        />
       </div>
     </>
   );

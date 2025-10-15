@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./Nature.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -17,7 +17,9 @@ export default function Nature() {
         );
         const data = await response.json();
         const filtered = data.hits.map(({ previewURL }) => ({ previewURL }));
-        const selectedImages = filtered.sort(() => Math.random() - 0.5).slice(0, 5);
+        const selectedImages = filtered
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 5);
         setImage(selectedImages);
       } catch (error) {
         console.log(error);
