@@ -11,7 +11,7 @@ export default function Weather() {
   if (error) return <div> {error.message}</div>;
 
   return (
-    <div className="weather-cards">
+    <div className="weather-cards" style={{ margin: "30px 0" }}>
       {data.slice(0, 3).map((card, idx) => (
         <div key={idx} className="weather-card">
           <div
@@ -19,6 +19,7 @@ export default function Weather() {
             style={{
               display: "flex",
               justifyContent: "space-between",
+
               width: "100%",
             }}
           >
@@ -26,13 +27,11 @@ export default function Weather() {
             <p className="weather-cards-country">{card.country}</p>
           </div>
           <div className="weather-card-time">
-            <p style={{ fontSize: "28px", fontWeight: "bold", margin: 0 }}>
-              {card.time}
-            </p>
+            <p>{card.time}</p>
             <button
               style={{
                 width: "114px",
-                height: "28px",
+                height: "auto",
                 background: "rgba(255, 179, 108, 1)",
                 border: "none",
                 borderRadius: "8px",
@@ -75,7 +74,7 @@ export default function Weather() {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              alignItems: "center",
+
               width: "100%",
               marginTop: "16px",
             }}
