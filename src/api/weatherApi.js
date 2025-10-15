@@ -41,3 +41,5 @@ export const getWeeklyForecast = async (city) => {
 
   return res.json();
 };
+
+

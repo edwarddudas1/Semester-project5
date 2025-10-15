@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Nature from "./components/Nature";
 import LineChart from "./components/LineChart";
 import LogIn from './registration/log-in/Log-in.jsx';
+import Weather from "./components/Weather";
 
 // import Modal from "./components/Modal";
 
@@ -17,13 +18,14 @@ function App() {
         <Header />
         {/* <Modal /> */}
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
         </Routes>
+        <Weather />
         <LineChart />
         <Nature />
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

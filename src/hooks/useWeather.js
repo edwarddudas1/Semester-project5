@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import getHourlyForecast from '../api/weatherApi.js'
+import {getHourlyForecast} from '../api/weatherApi.js'
 
 // const API_KEY = "1156cd29e714591bcb5a708b765d1d5f";
 
@@ -43,12 +43,11 @@ export function useWeather(city) {
             temp: item.main.temp,
             temp_min: item.main.temp_min,
             temp_max: item.main.temp_max,
+            weather: {
+              icon: item.weather[0].icon
+            }
           };
         });
-
-        if (!res.ok) {
-          throw new Error("failed to download data");
-        }
 
         // data = await res.json();
         setData(forecastData);
@@ -63,6 +62,6 @@ export function useWeather(city) {
     fetchWeatherData();
   }, [city]);
 
-  return { data, error, loading };
+  return { data, error, loading, setData };
   
 }
