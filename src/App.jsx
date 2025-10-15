@@ -6,6 +6,7 @@ import Home from './components/Home.jsx';
 import Footer from './components/Footer'
 import Nature from "./components/Nature";
 import LineChart from "./components/LineChart";
+import LogIn from './registration/log-in/Log-in.jsx';
 
 // import Modal from "./components/Modal";
 
