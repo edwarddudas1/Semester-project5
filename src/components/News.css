@@ -15,7 +15,9 @@ button{
 }
 
 .baby-modal{
-    display: flex;
-    flex-direction: column;
+display: grid;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
 }

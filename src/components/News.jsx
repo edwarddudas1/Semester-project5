@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './News.css'
 
 export default function Modal() {
-  const [visible, setVisible] = useState(2);
+  const [visible, setVisible] = useState(3);
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
