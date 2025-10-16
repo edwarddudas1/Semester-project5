@@ -9,13 +9,17 @@ h2{
     text-align: left;
 }
 button{
+
     display: flex;
-    align-self: start;
+    align-items: center;
+    text-align: left;
     background-color: orange;
+    margin-left: 10%;
 }
 
 .baby-modal{
 display: grid;
+text-align: center;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
