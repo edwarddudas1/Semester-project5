@@ -1,0 +1,82 @@
+.weather-card {
+    width: 320px;
+    height: auto;
+    background-color: #E8E8E8;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+       
+}
+
+.weather-cards {
+    padding-right: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    color: black;
+
+}
+
+.weather-card-location {
+    size: 14px;
+}
+.weather-cards-city {
+    padding: 15px 98px 0px 15px;
+}
+
+.weather-cards-country {
+    padding: 15px 30px 15px 0px;
+}
+
+.weather-card-time {
+    size: 24px;
+    font-weight: 500;
+    text-align: center;
+    padding: 0px 0px 15px 0px;
+}
+
+.weather-card-icon {
+padding: 0 ;
+}
+
+.weather-card-footer {
+    padding-bottom: 20px;
+}
+
+.weather-cards-footer-img-refresh {
+    padding: 0px 16px 20px 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.weather-cards-footer-img-heart {
+    padding: 0px 38px 20px 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.weather-cards-footer-button {
+    padding: 0px 27px 20px 0px;
+    width: 99px;
+    height: 28px;
+    size: 10px;
+    background: rgba(255, 179, 108, 1);
+    border: none;
+    padding: 4px 16px;
+    color: black;
+    cursor: pointer;
+    
+}
+
+.weather-cards-footer-img-delete {
+    padding: 0px 20px 20px 37px;
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,133 @@
+.modal-container {
+  width: 480px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.modal-container img {
+  width: 102px;
+  height: 76px;
+  margin-top: 30px;
+}
+
+.modal-text p {
+  color: #292626;
+  font-size: 24px;
+}
+
+.modal-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.logout {
+  width: 290px;
+  height: 60px;
+  background-color: #ffb36c;
+  color: #292626;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 3px 9px 20px #8f8787;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background-color: #faa85c;
+  border-color: #dfa131;
+}
+
+.cancel {
+  width: 290px;
+  height: 60px;
+  background-color: #e4e4e4;
+  color: #292626;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 20px;
+  box-shadow: 3px 9px 20px #8f8787;
+  cursor: pointer;
+}
+
+.cancel:hover {
+  background-color: #dadada;
+  border-color: #eee6dc;
+}
+
+.exit {
+  width: 210px;
+  height: 60px;
+  background-color: #ffb36c;
+  color: #292626;
+  font-size: 21px;
+  font-weight: 400;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 7px 20px #484848;
+  cursor: pointer;
+}
+
+.exit:hover {
+  background-color: #faa85c;
+  border-color: #dfa131;
+}
+
+@media (max-width: 430px) {
+  .modal-container {
+    width: 90%;
+    height: auto;
+  }
+  .modal-text p {
+    font-size: 20px;
+  }
+  .logout,
+  .cancel {
+    width: 270px;
+    height: 55px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1194px) {
+  .modal-container {
+    width: 85%;
+    height: auto;
+  }
+  .modal-text p {
+    font-size: 22px;
+  }
+  .logout,
+  .cancel {
+    width: 280px;
+    height: 50px;
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+  .modal-container {
+    width: 80%;
+    height: auto;
+  }
+  .modal-text p {
+    font-size: 20px;
+  }
+  .logout,
+  .cancel {
+    width: 270px;
+    height: 55px;
+    font-size: 19px;
+  }
+}
