@@ -13,3 +13,9 @@ button{
     align-self: start;
     background-color: orange;
 }
+
+.baby-modal{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

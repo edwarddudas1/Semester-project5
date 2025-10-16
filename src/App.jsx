@@ -1,10 +1,10 @@
 import './App.css'
-import Modal from './components/Modal'
+import News from './components/News'
 
 function App() {
   return (
     <>
-      <Modal />
+      <News />
     </>
   )
 }
