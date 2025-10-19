@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Log-in.css";
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function LogIn() {
   const [showNotification, setShowNotification] = useState(false);
+  const navigate = useNavigate();
+  
 
   const formik = useFormik({
     initialValues: {
@@ -17,6 +19,7 @@ export default function LogIn() {
       resetForm();
       setTimeout(() => {
         setShowNotification(false);
+        navigate("/home"); 
       }, 3000);
     },
   });
